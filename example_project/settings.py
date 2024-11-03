@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t$s+q#thm%p&+))ji60myq+cq%c=f6zfxb57&p!ljm@hs8j$@#'
+SECRET_KEY = 'django-insecure-ls4rx-2u7o&=(##4ktea*jmvupm$j3wg7vdgj+^v0p@ij9nr9a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'example_app',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,9 +76,13 @@ WSGI_APPLICATION = 'example_project.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'enrollment', 
+    'USER': 'root',  
+    'PASSWORD': 'drjh9095',   
+    'HOST': 'localhost',         
+    'PORT': '3306',     
     }
 }
 
